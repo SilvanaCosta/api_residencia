@@ -7,4 +7,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+
+  get '/saudacao', to: 'usuarios#saudacao'
+  resources :usuarios, only: [:create, :index, :update, :destroy]
 end
